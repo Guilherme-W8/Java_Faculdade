@@ -1,0 +1,27 @@
+
+
+/*
+ * Desenvolva um programa para armazenar n números inteiros em um vetor e depois
+imprimir todos os números positivos digitados.
+ */
+
+import java.util.Scanner;
+
+public class Projeto0 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int[] numeros = new int[sc.nextInt()];
+		
+		for(int i = 0; i < numeros.length; i++) {
+			numeros[i] = sc.nextInt();
+		}
+		
+		for(int i = 0; i < numeros.length; i++) {
+			if(0 < numeros[i]) {
+				System.out.println("Vetor posição: " + i + ". É positivo. : " + numeros[i]);
+			}
+		}
+		sc.close();
+	}
+
+}

@@ -1,0 +1,25 @@
+package Faculdade;
+import java.util.Locale;
+import java.util.Scanner;
+
+/*
+ * Escreva um programa que leia o n�mero de um funcion�rio, seu n�mero de horas trabalhadas, o valor que recebe por hora e calcula o sal�rio desse funcion�rio. A seguir, mostre o n�mero e o sal�rio do funcion�rio, com duas casas decimais.
+ */
+
+public class normalSalary {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int number = sc.nextInt();
+		int hour = sc.nextInt();
+		double value = sc.nextDouble();
+		
+		double salary = hour * value;
+		
+		System.out.println("NUMBER = " + number);
+		System.out.printf("SALARY = U$ %.2f", salary);
+		sc.close();
+	}
+}

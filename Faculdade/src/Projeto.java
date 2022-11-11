@@ -1,0 +1,31 @@
+
+
+/*
+ * Desenvolva um programa para armazenar 10 números inteiros em um vetor e imprimir
+uma listagem numerada contendo o número e umas das mensagens: par ou ímpar, para
+cada elemento do vetor.
+ */
+
+import java.util.Scanner;
+public class Projeto {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int[] vetorNumero = new int[sc.nextInt()];
+		
+		for(int i = 0; i < vetorNumero.length; i++) {
+			vetorNumero[i] = sc.nextInt(); 
+		}
+		
+		for(int i = vetorNumero.length - 1; i >= 0; i--) {
+			if(vetorNumero[i] % 2 == 0) {
+				System.out.println("Vetor na posição: " + i + ". É par.");
+			}
+			else {
+				System.out.println("Vetor na posição: " + i + ". É impar.");
+			}
+		}
+		
+		sc.close();
+	}
+}
